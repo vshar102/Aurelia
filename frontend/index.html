@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="AURELIA — Luxury fashion. Discover the Nocturne collection, crafted from Italian silk and hand-sourced cashmere.">
+  <title>AURELIA — Luxury Fashion House</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="shop">
+
+  <!-- Header -->
+  <header id="site-header">
+    <a href="index.html" class="header-logo">AURELIA</a>
+    <nav class="header-nav">
+      <a href="index.html" data-page="shop">Collection</a>
+      <a href="about.html" data-page="about">Maison</a>
+      <a href="contact.html" data-page="contact">Contact</a>
+      <button class="cart-btn" id="open-cart" aria-label="Open Cart">
+        &#9769; <span class="cart-count">0</span>
+      </button>
+    </nav>
+  </header>
+
+  <!-- Cart Overlay & Drawer -->
+  <div id="cart-overlay"></div>
+  <aside id="cart-drawer" aria-label="Shopping Cart">
+    <div class="cart-header">
+      <h2>Your Cart</h2>
+      <button class="close-btn" id="close-cart" aria-label="Close Cart">✕</button>
+    </div>
+    <div id="cart-items"></div>
+    <div id="cart-footer" class="cart-footer">
+      <div class="cart-total">
+        <span>Subtotal</span>
+        <span id="cart-total-val">$0.00</span>
+      </div>
+      <a href="checkout.html" class="btn-checkout">Proceed to Checkout</a>
+    </div>
+  </aside>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-eyebrow">The Nocturne Collection — 2026</div>
+    <h1 class="hero-title">Dressed in <em>Silence</em>,<br>Defined by Detail.</h1>
+    <p class="hero-sub">Italian silk. Hand-sourced cashmere. Crafted without compromise.</p>
+    <a href="#collection" class="btn-primary">Explore Collection</a>
+  </section>
+
+  <!-- Product Grid -->
+  <section class="section products-section" id="collection">
+    <div class="section-label">The Collection</div>
+    <h2 class="section-title">Nocturne, 2026</h2>
+    <div class="filter-bar">
+      <button class="filter-btn active" data-category="all">All</button>
+      <button class="filter-btn" data-category="Outerwear">Outerwear</button>
+      <button class="filter-btn" data-category="Accessories">Accessories</button>
+      <button class="filter-btn" data-category="Footwear">Footwear</button>
+    </div>
+    <div class="product-grid" id="product-grid">
+      <!-- Populated by script.js -->
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <span class="logo">AURELIA</span>
+    <p>© 2026 Aurelia Maison. All rights reserved.</p>
+    <p>Milan · Paris · London</p>
+  </footer>
+
+  <!-- Chat FAB -->
+  <button id="chat-fab" aria-label="Open Concierge Chat">&#128172;</button>
+  <div id="chat-window" role="dialog" aria-label="AURELIA Concierge">
+    <div class="chat-win-header">
+      <div>
+        <h4>AURELIA Concierge</h4>
+        <span>Personal Shopping Assistant</span>
+      </div>
+      <button class="close-btn" id="chat-close" aria-label="Close Chat">✕</button>
+    </div>
+    <div id="chat-messages">
+      <div class="msg bot">Good day. I am your personal AURELIA concierge. How may I be of service?</div>
+    </div>
+    <div id="typing-indicator" class="typing-indicator">
+      <div class="typing-dot"></div>
+      <div class="typing-dot"></div>
+      <div class="typing-dot"></div>
+    </div>
+    <div class="chat-input-row">
+      <input type="text" id="chat-input" placeholder="Ask about fabrics, sizing, collections…" autocomplete="off">
+      <button id="chat-send" aria-label="Send message">&#10148;</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

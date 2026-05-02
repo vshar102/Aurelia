@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Complete your AURELIA order — review your selections and finalise your purchase.">
+  <title>Checkout — AURELIA</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="checkout">
+
+  <header id="site-header">
+    <a href="index.html" class="header-logo">AURELIA</a>
+    <nav class="header-nav">
+      <a href="index.html" data-page="shop">Collection</a>
+      <a href="about.html" data-page="about">Maison</a>
+      <a href="contact.html" data-page="contact">Contact</a>
+      <button class="cart-btn" id="open-cart" aria-label="Open Cart">
+        &#9769; <span class="cart-count">0</span>
+      </button>
+    </nav>
+  </header>
+
+  <div id="cart-overlay"></div>
+  <aside id="cart-drawer">
+    <div class="cart-header"><h2>Your Cart</h2><button class="close-btn" id="close-cart">✕</button></div>
+    <div id="cart-items"></div>
+    <div id="cart-footer" class="cart-footer">
+      <div class="cart-total"><span>Subtotal</span><span id="cart-total-val">$0.00</span></div>
+      <a href="checkout.html" class="btn-checkout">Proceed to Checkout</a>
+    </div>
+  </aside>
+
+  <main class="section checkout-layout">
+    <!-- Left: Order Items -->
+    <div id="checkout-main">
+      <div class="section-label">Order Review</div>
+      <h1>Your Selection</h1>
+      <div id="order-items"></div>
+    </div>
+
+    <!-- Right: Summary -->
+    <div id="checkout-sidebar">
+      <div class="order-summary-box">
+        <h3>Order Summary</h3>
+        <div class="summary-row"><span>Subtotal</span><span id="sum-subtotal">$0.00</span></div>
+        <div class="summary-row"><span>Private Courier</span><span id="sum-shipping">$35.00</span></div>
+        <div class="summary-row total"><span>Total</span><span id="sum-total">$0.00</span></div>
+        <button class="btn-pay" id="pay-btn">
+          <div class="spinner"></div>
+          <span class="pay-label">Complete Order</span>
+        </button>
+        <p style="font-size:0.68rem;color:var(--color-muted);text-align:center;margin-top:1rem;line-height:1.6;">
+          By completing your order, you agree to AURELIA's Terms of Service and Return Policy.
+        </p>
+      </div>
+    </div>
+  </main>
+
+  <!-- Order Confirmation Overlay -->
+  <div id="order-confirm-overlay">
+    <div style="color:var(--color-gold);font-size:4rem;margin-bottom:1.5rem;">&#10003;</div>
+    <h1>Order Confirmed</h1>
+    <p>Your selections are being prepared with the utmost care. A private courier will deliver your AURELIA order within 3–5 business days.</p>
+    <p style="font-size:0.75rem;color:var(--color-muted);letter-spacing:0.2em;margin-bottom:2rem;">
+      ORDER REF: <strong id="order-id" style="color:var(--color-gold);"></strong>
+    </p>
+    <a href="index.html" class="btn-primary">Continue Shopping</a>
+  </div>
+
+  <footer>
+    <span class="logo">AURELIA</span>
+    <p>© 2026 Aurelia Maison. All rights reserved.</p>
+    <p>Milan · Paris · London</p>
+  </footer>
+
+  <button id="chat-fab" aria-label="Open Concierge Chat">&#128172;</button>
+  <div id="chat-window" role="dialog">
+    <div class="chat-win-header">
+      <div><h4>AURELIA Concierge</h4><span>Personal Shopping Assistant</span></div>
+      <button class="close-btn" id="chat-close">✕</button>
+    </div>
+    <div id="chat-messages">
+      <div class="msg bot">Good day. I am your personal AURELIA concierge. How may I be of service?</div>
+    </div>
+    <div id="typing-indicator" class="typing-indicator">
+      <div class="typing-dot"></div><div class="typing-dot"></div><div class="typing-dot"></div>
+    </div>
+    <div class="chat-input-row">
+      <input type="text" id="chat-input" placeholder="Ask about fabrics, sizing, collections…" autocomplete="off">
+      <button id="chat-send">&#10148;</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

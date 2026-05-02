@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact AURELIA — Private client enquiries, bespoke orders, and press relations.">
+  <title>Contact — AURELIA</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="contact">
+
+  <header id="site-header">
+    <a href="index.html" class="header-logo">AURELIA</a>
+    <nav class="header-nav">
+      <a href="index.html" data-page="shop">Collection</a>
+      <a href="about.html" data-page="about">Maison</a>
+      <a href="contact.html" data-page="contact">Contact</a>
+      <button class="cart-btn" id="open-cart" aria-label="Open Cart">
+        &#9769; <span class="cart-count">0</span>
+      </button>
+    </nav>
+  </header>
+
+  <div id="cart-overlay"></div>
+  <aside id="cart-drawer">
+    <div class="cart-header"><h2>Your Cart</h2><button class="close-btn" id="close-cart">✕</button></div>
+    <div id="cart-items"></div>
+    <div id="cart-footer" class="cart-footer">
+      <div class="cart-total"><span>Subtotal</span><span id="cart-total-val">$0.00</span></div>
+      <a href="checkout.html" class="btn-checkout">Proceed to Checkout</a>
+    </div>
+  </aside>
+
+  <main class="section contact-layout">
+    <!-- Left: Info -->
+    <div class="contact-info">
+      <div class="section-label">Enquiries</div>
+      <h1>Speak With<br>The Maison</h1>
+      <div class="divider"></div>
+      <p>Whether you seek a bespoke commission, require a private styling appointment, or wish to discuss a press enquiry, our team responds with the same care that goes into every garment.</p>
+      <div style="display:flex;flex-direction:column;gap:1.5rem;margin-top:2rem;">
+        <div class="contact-detail">
+          <span>Private Client Services</span>
+          <strong>concierge@aurelia-maison.com</strong>
+        </div>
+        <div class="contact-detail">
+          <span>Press & Editorial</span>
+          <strong>press@aurelia-maison.com</strong>
+        </div>
+        <div class="contact-detail">
+          <span>Milan Atelier</span>
+          <strong>Via Montenapoleone, 12 · 20121 Milano</strong>
+        </div>
+        <div class="contact-detail">
+          <span>Hours</span>
+          <strong>Monday – Saturday, 10:00 – 18:00 CET</strong>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right: Form -->
+    <div>
+      <form id="contact-form" novalidate>
+        <div class="form-group">
+          <label for="name">Full Name</label>
+          <input type="text" id="name" name="name" required placeholder="Your full name">
+        </div>
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" required placeholder="your@email.com">
+        </div>
+        <div class="form-group">
+          <label for="subject">Subject</label>
+          <select id="subject" name="subject" required>
+            <option value="" disabled selected>Select a subject</option>
+            <option value="Private Client Enquiry">Private Client Enquiry</option>
+            <option value="Bespoke Commission">Bespoke Commission</option>
+            <option value="Sizing & Fit Consultation">Sizing & Fit Consultation</option>
+            <option value="Order Support">Order Support</option>
+            <option value="Press & Editorial">Press & Editorial</option>
+            <option value="General Enquiry">General Enquiry</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" required placeholder="How may we be of service?"></textarea>
+        </div>
+        <div id="form-alert" class="form-alert"></div>
+        <button type="submit" class="btn-primary" style="width:100%;border:none;cursor:pointer;">Send Enquiry</button>
+      </form>
+
+      <div id="contact-success">
+        <div style="color:var(--color-gold);font-size:3rem;margin-bottom:1.5rem;">&#10003;</div>
+        <h2 style="font-family:var(--font-display);font-size:2rem;color:var(--color-gold);margin-bottom:1rem;">Message Received</h2>
+        <p id="success-msg" style="color:var(--color-muted);max-width:420px;margin:0 auto 2rem;"></p>
+        <a href="index.html" class="btn-primary">Return to Collection</a>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <span class="logo">AURELIA</span>
+    <p>© 2026 Aurelia Maison. All rights reserved.</p>
+    <p>Milan · Paris · London</p>
+  </footer>
+
+  <button id="chat-fab" aria-label="Open Concierge Chat">&#128172;</button>
+  <div id="chat-window" role="dialog">
+    <div class="chat-win-header">
+      <div><h4>AURELIA Concierge</h4><span>Personal Shopping Assistant</span></div>
+      <button class="close-btn" id="chat-close">✕</button>
+    </div>
+    <div id="chat-messages">
+      <div class="msg bot">Good day. I am your personal AURELIA concierge. How may I be of service?</div>
+    </div>
+    <div id="typing-indicator" class="typing-indicator">
+      <div class="typing-dot"></div><div class="typing-dot"></div><div class="typing-dot"></div>
+    </div>
+    <div class="chat-input-row">
+      <input type="text" id="chat-input" placeholder="Ask about fabrics, sizing, collections…" autocomplete="off">
+      <button id="chat-send">&#10148;</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

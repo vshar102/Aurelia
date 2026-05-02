@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="The story of AURELIA — a luxury fashion house born from a devotion to craft, silence, and enduring beauty.">
+  <title>Maison AURELIA — Our Story</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="about">
+
+  <!-- Header -->
+  <header id="site-header">
+    <a href="index.html" class="header-logo">AURELIA</a>
+    <nav class="header-nav">
+      <a href="index.html" data-page="shop">Collection</a>
+      <a href="about.html" data-page="about">Maison</a>
+      <a href="contact.html" data-page="contact">Contact</a>
+      <button class="cart-btn" id="open-cart" aria-label="Open Cart">
+        &#9769; <span class="cart-count">0</span>
+      </button>
+    </nav>
+  </header>
+
+  <!-- Cart -->
+  <div id="cart-overlay"></div>
+  <aside id="cart-drawer" aria-label="Shopping Cart">
+    <div class="cart-header">
+      <h2>Your Cart</h2>
+      <button class="close-btn" id="close-cart">✕</button>
+    </div>
+    <div id="cart-items"></div>
+    <div id="cart-footer" class="cart-footer">
+      <div class="cart-total"><span>Subtotal</span><span id="cart-total-val">$0.00</span></div>
+      <a href="checkout.html" class="btn-checkout">Proceed to Checkout</a>
+    </div>
+  </aside>
+
+  <!-- Page Hero -->
+  <div class="page-hero">
+    <h1>The Maison</h1>
+  </div>
+
+  <!-- Story Section 1 -->
+  <section class="section">
+    <div class="about-grid">
+      <div>
+        <div class="section-label">Founded 1998, Milan</div>
+        <h2 class="section-title">A House Built on Silence</h2>
+        <div class="divider"></div>
+        <p>AURELIA was born from a single conviction: that true luxury speaks in a whisper. Founded in 1998 in a quiet atelier on the Via Montenapoleone, our house has spent nearly three decades rejecting the obvious in favour of the enduring.</p>
+        <br>
+        <p>Every garment that bears our name has passed through the hands of master craftspeople who treat their work as devotion. We source nothing that is not exceptional, and we compromise nothing that matters.</p>
+        <div class="pull-quote">"Elegance is not about being noticed — it is about being remembered."</div>
+      </div>
+      <div class="about-img">
+        <img src="https://picsum.photos/seed/about1/800/1000" alt="AURELIA Atelier">
+      </div>
+    </div>
+  </section>
+
+  <!-- Full Bleed -->
+  <div class="full-bleed">
+    <img src="https://picsum.photos/seed/aboutfull/1600/500" alt="AURELIA Campaign">
+  </div>
+
+  <!-- Story Section 2 -->
+  <section class="section">
+    <div class="about-grid reverse">
+      <div class="about-img">
+        <img src="https://picsum.photos/seed/about2/800/1000" alt="AURELIA Craftsmanship">
+      </div>
+      <div>
+        <div class="section-label">The Nocturne Collection</div>
+        <h2 class="section-title">Drawn from Vienna's Dusk</h2>
+        <div class="divider"></div>
+        <p>Our 2026 collection, Nocturne, finds its soul in the fin-de-siècle architecture of Vienna — in the ornate facades that cloak raw emotion, in the gilded interiors that speak of civilisations that refused to forget beauty.</p>
+        <br>
+        <p>Each silhouette is an exercise in restraint. Double-faced cashmere overcoats. Hand-rolled silk blouses. Goodyear-welted shoes built to outlast a decade of trends. These are not garments. They are declarations.</p>
+        <div class="pull-quote">"We do not follow the season. We set the conditions for it."</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Values -->
+  <section class="section" style="text-align:center; max-width:700px; margin:0 auto;">
+    <div class="section-label">Our Philosophy</div>
+    <h2 class="section-title">Three Pillars of the Maison</h2>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;text-align:center;margin-top:2rem;">
+      <div>
+        <div style="color:var(--color-gold);font-size:1.5rem;margin-bottom:0.75rem;">I</div>
+        <h3 style="font-family:var(--font-display);font-size:1.1rem;margin-bottom:0.5rem;">Provenance</h3>
+        <p style="font-size:0.78rem;color:var(--color-muted);line-height:1.8;">Every material is traced to its origin. Every supplier is visited, not vetted.</p>
+      </div>
+      <div>
+        <div style="color:var(--color-gold);font-size:1.5rem;margin-bottom:0.75rem;">II</div>
+        <h3 style="font-family:var(--font-display);font-size:1.1rem;margin-bottom:0.5rem;">Permanence</h3>
+        <p style="font-size:0.78rem;color:var(--color-muted);line-height:1.8;">We design for decades, not seasons. An AURELIA piece is a lifelong companion.</p>
+      </div>
+      <div>
+        <div style="color:var(--color-gold);font-size:1.5rem;margin-bottom:0.75rem;">III</div>
+        <h3 style="font-family:var(--font-display);font-size:1.1rem;margin-bottom:0.5rem;">Precision</h3>
+        <p style="font-size:0.78rem;color:var(--color-muted);line-height:1.8;">A single garment passes through forty pairs of hands before it reaches yours.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <span class="logo">AURELIA</span>
+    <p>© 2026 Aurelia Maison. All rights reserved.</p>
+    <p>Milan · Paris · London</p>
+  </footer>
+
+  <button id="chat-fab" aria-label="Open Concierge Chat">&#128172;</button>
+  <div id="chat-window" role="dialog">
+    <div class="chat-win-header">
+      <div><h4>AURELIA Concierge</h4><span>Personal Shopping Assistant</span></div>
+      <button class="close-btn" id="chat-close">✕</button>
+    </div>
+    <div id="chat-messages">
+      <div class="msg bot">Good day. I am your personal AURELIA concierge. How may I be of service?</div>
+    </div>
+    <div id="typing-indicator" class="typing-indicator">
+      <div class="typing-dot"></div><div class="typing-dot"></div><div class="typing-dot"></div>
+    </div>
+    <div class="chat-input-row">
+      <input type="text" id="chat-input" placeholder="Ask about fabrics, sizing, collections…" autocomplete="off">
+      <button id="chat-send">&#10148;</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
